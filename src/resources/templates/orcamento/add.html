@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../fontawesome-5.15.3/css/all.css">
+        <link rel="stylesheet" href="../bootstrap-5.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/estilo.css">
+    
+
+<head>
+    <div id="box-orcamento">
+        <div class="titulo1">Solicite seu orçamento</div>
+        <div class="form-orcamento">
+            <form id="FormOrcamento" action="/contatos-email.php" method="post" enctype="multipart/form-data" onsubmit="return false">
+                <div class="metade1">
+                    <div class="campo">
+                        <select name="onde" id="onde">
+                            <option value="0">Onde nos conheceu?</option>
+                            <option value="Já sou cliente / Fornecedor">Já sou cliente / Fornecedor</option>
+                            <option value="Indicação de amigo">Indicação de amigo. </option>
+                            <option value="Google">Google</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="Rádio, TV, Revista, Jornal etc">Rádio, TV, Revista, Jornal etc</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                
+                    <div class="campo">
+                        <select name="tipo_evento" id="tipo_evento">
+                            <option value="0" selected="selected">Tipo de Evento</option>
+                            <option value="Casamento">Casamento</option>
+                            <option value="15 Anos / Debutante">15 Anos / Debutante</option>
+                            <option value="Aniversário">Aniversário</option>
+                            <option value="Corporativo">Corporativo</option>
+                            <option value="Formatura">Formatura</option>
+                            <option value="Baile">Baile</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <input name="data" type="text" id="data" placeholder="Data do evento:" maxlength="110" value="">
+                    </div>
+                    <div class="campo">
+                        <select name="tipo_serv" id="tipo_serv">
+                            <option value="0" selected="selected">Tipo de Serviço</option>
+                            <option value="Buffet">Buffet</option>
+                            <option value="Coquetel">Coquetel</option>
+                            <option value="Finger Food">Finger Food</option>
+                            <option value="Coffe Break">Coffe Break</option>
+                            <option value="Ainda não tenho definido">Ainda não tenho definido</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <select name="local_recep" id="local_recep">
+                            <option value="0" selected="selected">Local de Recepção</option>
+                            <option value="Senai CTAI (Saco Grande)">Senai CTAI (Saco Grande)</option>
+                            <option value="Lagoa Iate Clube - LIC (Lagoa da Conceição)">Lagoa Iate Clube - LIC (Lagoa da Conceição)</option>
+                            <option value="Clube Paula Ramos (Trindade)">Clube Paula Ramos (Trindade)</option>
+                           
+                            <option value="Outro Local">Outro Local</option>
+                        </select>
+                    </div>
+                    <link rel="stylesheet" type="text/css" href="estilos/estilo.css">
+                    <div class="campo">
+                        <input name="n_conv" type="text" id="n_conv" placeholder="Número de Convidados:" maxlength="110" value="">
+                    </div>
+                    <body style="background-image: url(orcamento.jpg)">
+                </div>
+                <div class="metade2">
+                    <div class="campo">
+                        <input name="nome" type="text" id="nome" maxlength="60" placeholder="Nome:" value="">                      
+                    </div>
+                    <div class="campo">
+                        <input name="email" type="text" id="email" placeholder="Email:" maxlength="110" value="">
+                    </div>
+                    <div class="campo">
+                        <input name="telefone" type="text" id="telefone" maxlength="15" placeholder="Telefone:" value="" autocomplete="off">
+                    </div>
+                    <div class="campo">
+                        <textarea name="mensagem" id="mensagem" placeholder="Mensagem"></textarea>
+                    </div>
+        
+                    <div class="campo">
+                        <input id="botao-enviar" type="button" value="Enviar" name="enviar" onclick="validarFormContato(this.form)" class="botao-enviar">
+                    </div>
+    
+                </div>
+            </form>
+    
+            <div class="siga-nos">
+                Siga-nos no Instagram: <a href="https://www.instagram.com/sesi.florianopolis/"><img src="static/img/instagram2.png"></a>
+            </div>
+        </div>
+    </div>
+
+    </head>
+
+    
+</body>
+
+</html>
